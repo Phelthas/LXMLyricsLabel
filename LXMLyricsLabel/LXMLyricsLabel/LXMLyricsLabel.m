@@ -37,7 +37,7 @@
     self.maskLabel.backgroundColor = self.maskBackgroundColor;
     
     CALayer *maskLayer = [CALayer layer];
-    maskLayer.anchorPoint = CGPointMake(0, 0.5);
+    maskLayer.anchorPoint = CGPointMake(0, 0.5);//注意，按默认的anchorPoint，width动画是同时像左右扩展的
     maskLayer.position = CGPointMake(0, CGRectGetHeight(self.bounds) / 2);
     maskLayer.bounds = CGRectMake(0, 0, 0, CGRectGetHeight(self.bounds));
     maskLayer.backgroundColor = [UIColor whiteColor].CGColor;

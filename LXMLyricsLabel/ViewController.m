@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     LXMLyricsLabel *lyricsLabel = [[LXMLyricsLabel alloc] initWithFrame:CGRectMake(100, 100, 200, 20)];
-    lyricsLabel.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, 100);
+    lyricsLabel.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, 200);
     lyricsLabel.backgroundColor = [UIColor lightGrayColor];
     lyricsLabel.font = [UIFont systemFontOfSize:14];
     lyricsLabel.textColor = [UIColor whiteColor];
