@@ -10,4 +10,8 @@
 
 @interface LXMBilayerLabel : UILabel
 
+- (void)startAnimation;
+
+- (void)stopAnimation;
+
 @end

@@ -18,5 +18,6 @@
  */
 - (void)startLyricsAnimationWithTimeArray:(NSArray *)timeArray andLocationArray:(NSArray *)locationArray;
 
+- (void)stopAnimation;
 
 @end

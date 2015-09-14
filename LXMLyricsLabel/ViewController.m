@@ -8,11 +8,12 @@
 
 #import "ViewController.h"
 #import "LXMLyricsLabel.h"
-
+#import "LXMBilayerLabel.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) LXMLyricsLabel *lyricsLabel;
+@property (nonatomic, strong) LXMBilayerLabel *bilayerLabel;
 
 @end
 
@@ -31,12 +32,23 @@
     [self.view addSubview:lyricsLabel];
     self.lyricsLabel = lyricsLabel;
     
-    UIButton *playButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UIButton *playButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
     playButton.center = self.view.center;
     playButton.backgroundColor = [UIColor purpleColor];
     [playButton setTitle:@"play" forState:UIControlStateNormal];
+    [playButton setTitle:@"stop" forState:UIControlStateSelected];
     [playButton addTarget:self action:@selector(handlePlayButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:playButton];
+    
+    LXMBilayerLabel *bilayerLabel =  [[LXMBilayerLabel alloc] initWithFrame:CGRectMake(100, 100, 200, 20)];
+    bilayerLabel.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, 200 + 30);
+    bilayerLabel.backgroundColor = [UIColor lightGrayColor];
+    bilayerLabel.font = [UIFont systemFontOfSize:14];
+    bilayerLabel.textColor = [UIColor whiteColor];
+    bilayerLabel.text = @"knocking on heaven's door";
+    bilayerLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:bilayerLabel];
+    self.bilayerLabel = bilayerLabel;
     
 }
 
@@ -62,7 +74,17 @@
                                @(0.8),
                                @(1)
                                ];
-    [self.lyricsLabel startLyricsAnimationWithTimeArray:timeArray andLocationArray:locationArray];
+
+    
+    
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [self.bilayerLabel startAnimation];
+        [self.lyricsLabel startLyricsAnimationWithTimeArray:timeArray andLocationArray:locationArray];
+    } else {
+        [self.bilayerLabel stopAnimation];
+        [self.lyricsLabel stopAnimation];
+    }
     
 }
 
