@@ -15,6 +15,7 @@
 		43A4640C1B9E784C00F732FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A4640A1B9E784C00F732FC /* LaunchScreen.xib */; };
 		43A464181B9E784C00F732FC /* LXMLyricsLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A464171B9E784C00F732FC /* LXMLyricsLabelTests.m */; };
 		43A464241B9E788C00F732FC /* LXMLyricsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A464231B9E788C00F732FC /* LXMLyricsLabel.m */; };
+		43BC063B1BA674F8006EA05A /* LXMBilayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BC063A1BA674F8006EA05A /* LXMBilayerLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		43A464171B9E784C00F732FC /* LXMLyricsLabelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXMLyricsLabelTests.m; sourceTree = "<group>"; };
 		43A464221B9E788C00F732FC /* LXMLyricsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMLyricsLabel.h; sourceTree = "<group>"; };
 		43A464231B9E788C00F732FC /* LXMLyricsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMLyricsLabel.m; sourceTree = "<group>"; };
+		43BC06391BA674F8006EA05A /* LXMBilayerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMBilayerLabel.h; sourceTree = "<group>"; };
+		43BC063A1BA674F8006EA05A /* LXMBilayerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMBilayerLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 			children = (
 				43A464221B9E788C00F732FC /* LXMLyricsLabel.h */,
 				43A464231B9E788C00F732FC /* LXMLyricsLabel.m */,
+				43BC06391BA674F8006EA05A /* LXMBilayerLabel.h */,
+				43BC063A1BA674F8006EA05A /* LXMBilayerLabel.m */,
 			);
 			path = LXMLyricsLabel;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				43A464041B9E784C00F732FC /* ViewController.m in Sources */,
 				43A464011B9E784C00F732FC /* AppDelegate.m in Sources */,
 				43A464241B9E788C00F732FC /* LXMLyricsLabel.m in Sources */,
+				43BC063B1BA674F8006EA05A /* LXMBilayerLabel.m in Sources */,
 				43A463FE1B9E784C00F732FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +438,7 @@
 				43A4641D1B9E784C00F732FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43A4641E1B9E784C00F732FC /* Build configuration list for PBXNativeTarget "LXMLyricsLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				43A464201B9E784C00F732FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
