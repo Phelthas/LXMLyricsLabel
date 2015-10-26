@@ -10,7 +10,8 @@
 
 @interface LXMLyricsLabel ()
 
-@property (nonatomic, strong) UILabel *maskLabel;
+@property (nonatomic, strong, readwrite) UILabel *textLabel;
+@property (nonatomic, strong, readwrite) UILabel *maskLabel;
 @property (nonatomic, strong) CALayer *maskLayer;//用来控制maskLabel渲染的layer
 
 @property (nonatomic, strong) UIColor *maskTextColor;
@@ -23,6 +24,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self addSubview:self.textLabel];
         [self addSubview:self.maskLabel];
         [self setupDefault];
     }
@@ -48,6 +50,22 @@
 }
 
 #pragma mark - publicMethod
+
+
+- (void)setFont:(UIFont *)font {
+    self.textLabel.font = font;
+    self.maskLabel.font = font;
+}
+
+- (void)setText:(NSString *)text {
+    self.textLabel.text = text;
+    self.maskLabel.text = text;
+}
+
+- (void)setTextAlignment:(NSTextAlignment)textAlignment {
+    self.textLabel.textAlignment = textAlignment;
+    self.maskLabel.textAlignment = textAlignment;
+}
 
 
 - (void)startLyricsAnimationWithTimeArray:(NSArray *)timeArray andLocationArray:(NSArray *)locationArray {
@@ -77,28 +95,15 @@
     [self.maskLayer removeAllAnimations];
 }
 
-#pragma mark - setter 
-
-- (void)setText:(NSString *)text {
-    [super setText:text];
-    self.maskLabel.text = text;
-}
-
-- (void)setFont:(UIFont *)font {
-    [super setFont:font];
-    self.maskLabel.font = font;
-}
-
-- (void)setTextAlignment:(NSTextAlignment)textAlignment {
-    [super setTextAlignment:textAlignment];
-    [self.maskLabel setTextAlignment:textAlignment];
-}
-
-
-
-
 
 #pragma mark - property
+
+- (UILabel *)textLabel {
+    if (!_textLabel) {
+        _textLabel = [[UILabel alloc] initWithFrame:self.bounds];
+    }
+    return _textLabel;
+}
 
 - (UILabel *)maskLabel {
     if (!_maskLabel) {

@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LXMLyricsLabel : UILabel
+@interface LXMLyricsLabel : UIView
+
+@property (nonatomic, strong, readonly) UILabel *textLabel;
+@property (nonatomic, strong, readonly) UILabel *maskLabel;
+
+
+- (void)setFont:(UIFont *)font;
+
+- (void)setText:(NSString *)text;
+
+- (void)setTextAlignment:(NSTextAlignment)textAlignment;
 
 /**
  *  根据设置显示动画

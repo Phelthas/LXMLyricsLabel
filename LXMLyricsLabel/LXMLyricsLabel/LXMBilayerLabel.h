@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LXMBilayerLabel : UILabel
+@interface LXMBilayerLabel : UIView
+
+@property (nonatomic, strong, readonly) UILabel *textLabel;
+@property (nonatomic, strong, readonly) UILabel *maskLabel;
+
+- (void)setFont:(UIFont *)font;
+
+- (void)setText:(NSString *)text;
+
+- (void)setTextAlignment:(NSTextAlignment)textAlignment;
+
 
 - (void)startAnimation;
 

@@ -25,9 +25,9 @@
     LXMLyricsLabel *lyricsLabel = [[LXMLyricsLabel alloc] initWithFrame:CGRectMake(100, 100, 200, 20)];
     lyricsLabel.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, 200);
     lyricsLabel.backgroundColor = [UIColor lightGrayColor];
+    lyricsLabel.textLabel.textColor = [UIColor whiteColor];
     lyricsLabel.font = [UIFont systemFontOfSize:14];
-    lyricsLabel.textColor = [UIColor whiteColor];
-    lyricsLabel.text = @"knocking on heaven's door";
+    lyricsLabel.text = @"向前跑！迎着冷眼和嘲笑";//@"knocking on heaven's door";
     lyricsLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:lyricsLabel];
     self.lyricsLabel = lyricsLabel;
@@ -43,8 +43,8 @@
     LXMBilayerLabel *bilayerLabel =  [[LXMBilayerLabel alloc] initWithFrame:CGRectMake(100, 100, 200, 20)];
     bilayerLabel.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, 200 + 30);
     bilayerLabel.backgroundColor = [UIColor lightGrayColor];
+    bilayerLabel.textLabel.textColor = [UIColor whiteColor];
     bilayerLabel.font = [UIFont systemFontOfSize:14];
-    bilayerLabel.textColor = [UIColor whiteColor];
     bilayerLabel.text = @"knocking on heaven's door";
     bilayerLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:bilayerLabel];
